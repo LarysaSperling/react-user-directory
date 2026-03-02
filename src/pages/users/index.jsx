@@ -1,24 +1,22 @@
 import { Link } from "react-router-dom";
-
-export const users = [
-  { id: 1, name: "Anna", age: 25, bio: "Frontend Developer" },
-  { id: 2, name: "Max", age: 30, bio: "Backend Developer" },
-  { id: 3, name: "Sophie", age: 28, bio: "Fullstack Developer" },
-];
+import { users } from "../../data/users";
+import styles from "./styles.module.css";
 
 function Users() {
   return (
     <div>
-      <h1>Users List</h1>
-      <ul>
+      <h1>Users</h1>
+      <div className={styles.grid}>
         {users.map((user) => (
-          <li key={user.id}>
-            <Link to={`/users/${user.id}`}>
-              {user.name}
-            </Link>
-          </li>
+          <Link 
+            key={user.id}
+            to={`/users/${user.id}`}
+            className={styles.card}
+          >
+            {user.name}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

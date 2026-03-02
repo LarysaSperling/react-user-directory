@@ -1,16 +1,22 @@
 .nav {
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f3f3f3;
+  gap: 30px;
+  padding: 20px 40px;
+  background: #111827;
 }
 
 .nav a {
   text-decoration: none;
-  font-weight: bold;
-  color: black;
+  color: #d1d5db;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: blue;
+  color: white;
+}
+
+.active {
+  color: white;
+  border-bottom: 2px solid #3b82f6;
 }
